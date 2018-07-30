@@ -1,0 +1,14 @@
+C:\Users\cprob\Exercism\csharp\rna-transcription\bin\Debug\netcoreapp2.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\cprob\Exercism\csharp\rna-transcription\bin\Debug\netcoreapp2.0\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\cprob\Exercism\csharp\rna-transcription\bin\Debug\netcoreapp2.0\xunit.runner.utility.netcoreapp10.dll
+C:\Users\cprob\Exercism\csharp\rna-transcription\bin\Debug\netcoreapp2.0\RnaTranscription.deps.json
+C:\Users\cprob\Exercism\csharp\rna-transcription\bin\Debug\netcoreapp2.0\RnaTranscription.runtimeconfig.json
+C:\Users\cprob\Exercism\csharp\rna-transcription\bin\Debug\netcoreapp2.0\RnaTranscription.runtimeconfig.dev.json
+C:\Users\cprob\Exercism\csharp\rna-transcription\bin\Debug\netcoreapp2.0\RnaTranscription.dll
+C:\Users\cprob\Exercism\csharp\rna-transcription\bin\Debug\netcoreapp2.0\RnaTranscription.pdb
+C:\Users\cprob\Exercism\csharp\rna-transcription\obj\Debug\netcoreapp2.0\RnaTranscription.csprojAssemblyReference.cache
+C:\Users\cprob\Exercism\csharp\rna-transcription\obj\Debug\netcoreapp2.0\RnaTranscription.csproj.CoreCompileInputs.cache
+C:\Users\cprob\Exercism\csharp\rna-transcription\obj\Debug\netcoreapp2.0\RnaTranscription.AssemblyInfoInputs.cache
+C:\Users\cprob\Exercism\csharp\rna-transcription\obj\Debug\netcoreapp2.0\RnaTranscription.AssemblyInfo.cs
+C:\Users\cprob\Exercism\csharp\rna-transcription\obj\Debug\netcoreapp2.0\RnaTranscription.dll
+C:\Users\cprob\Exercism\csharp\rna-transcription\obj\Debug\netcoreapp2.0\RnaTranscription.pdb
