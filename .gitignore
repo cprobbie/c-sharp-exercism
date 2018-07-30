@@ -3,3 +3,6 @@ bin/
 
 # Ignore folder named 'obj'
 obj/
+
+# Ignore folder named '.vscode'
+.vscode/
