@@ -1,23 +1,28 @@
 using System;
 using System.Text.RegularExpressions;
+using System.Linq;
 
 public static class Bob
 {
     public static string Response(string statement)
     {
-        statement = Regex.Replace(statement, @"[\d]+", " ");
+        string ReplaceDigitsWithSpaces() => Regex.Replace(statement, @"[\d]+", " ");
+        string RemoveAllWhiteSpaces() => Regex.Replace(statement, @"[\s]+", "");
+        string ReplaceNoneWordsWithSpaces() => Regex.Replace(statement, @"[\W]+", " ");
 
-        if (Regex.IsMatch(statement, @"[\?]$")){
-            Regex.Replace(statement, @"[\W]+", "");
+        statement.Trim();
+        statement = ReplaceDigitsWithSpaces();
+
+        if (statement.EndsWith("?")){
             if (Regex.IsMatch(statement, @"[\w]+") && statement.ToUpper() == statement)
                 return "Calm down, I know what I'm doing!";
         }
-        statement = Regex.Replace(statement, @"[\s]+", "");
+        statement = RemoveAllWhiteSpaces();
         
-        if (Regex.IsMatch(statement, @"[\?]$"))
+        if (statement.EndsWith("?"))
             return "Sure.";
 
-        statement = Regex.Replace(statement, @"[\W]+", " ");
+        statement = ReplaceNoneWordsWithSpaces();
 
         if (statement.ToUpper() == statement && !string.IsNullOrWhiteSpace(statement))
             return "Whoa, chill out!";            
