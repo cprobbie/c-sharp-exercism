@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 public class SpaceAge
 {
-    private long sec;
+    private long _sec;
     private const double _earthSecPerYear = 31557600;
-    private readonly Dictionary<string, double> _dict = new Dictionary<string, double>()
+    private static readonly Dictionary<string, double> _dict = new Dictionary<string, double>()
     {
         { "Earth", 1 },
         { "Mercury", 0.2408467 },
@@ -18,54 +18,51 @@ public class SpaceAge
     };
     public SpaceAge(long seconds)
     {
-        sec = seconds;
+        _sec = seconds;
     }
 
     public double OnEarth()
     {
-        double planetSecPerYear = _earthSecPerYear * _dict["Earth"];
-        return (Convert.ToDouble(sec) / planetSecPerYear);
+        return CalculateAge("Earth");
     }
 
     public double OnMercury()
     {
-        double planetSecPerYear = _earthSecPerYear * _dict["Mercury"];
-        return (Convert.ToDouble(sec) / planetSecPerYear);
+        return CalculateAge("Mercury");
     }
 
     public double OnVenus()
     {
-        double planetSecPerYear = _earthSecPerYear * _dict["Venus"];
-        return (Convert.ToDouble(sec) / planetSecPerYear);
+        return CalculateAge("Venus");
     }
 
     public double OnMars()
     {
-        double planetSecPerYear = _earthSecPerYear * _dict["Mars"];
-        return (Convert.ToDouble(sec) / planetSecPerYear); 
+        return CalculateAge("Mars");
     }
 
     public double OnJupiter()
     {
-        double planetSecPerYear = _earthSecPerYear * _dict["Jupiter"];
-        return (Convert.ToDouble(sec) / planetSecPerYear); 
+        return CalculateAge("Jupiter");
     }
 
     public double OnSaturn()
     {
-        double planetSecPerYear = _earthSecPerYear * _dict["Saturn"];
-        return (Convert.ToDouble(sec) / planetSecPerYear); 
+        return CalculateAge("Saturn");
     }
 
     public double OnUranus()
     {
-        double planetSecPerYear = _earthSecPerYear * _dict["Uranus"];
-        return (Convert.ToDouble(sec) / planetSecPerYear); 
+        return CalculateAge("Uranus");
     }
 
     public double OnNeptune()
     {
-        double planetSecPerYear = _earthSecPerYear * _dict["Neptune"];
-        return (Convert.ToDouble(sec) / planetSecPerYear); 
+        return CalculateAge("Neptune");
+    }
+
+    private double CalculateAge(string planet)
+    {
+        return _sec / (_earthSecPerYear * _dict[planet]);
     }
 }
