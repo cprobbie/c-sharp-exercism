@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 public static class NucleotideCount
 {
+    public static IReadOnlyDictionary<char, int> _readOnlyResult { get; private set; }
     public static IDictionary<char, int> Count(string sequence)
     {
         try
@@ -19,8 +20,9 @@ public static class NucleotideCount
             {
                 result[c]++;
             }
+            _readOnlyResult = result;
 
-            return result;
+            return (IDictionary<char, int>)_readOnlyResult;
         }
         catch
         {
